@@ -17,7 +17,7 @@ class AutenticacaoController extends Controller
      */
     public function __construct($authService)
     {
-      $this->authService = $authService ;
+        $this->authService = $authService ;
     }
     /**
      * @param Request $request
@@ -25,7 +25,7 @@ class AutenticacaoController extends Controller
      */
     public function autenticar(Request $request)
     {
-        try{
+        try {
             if (!$request->header('authorization')) {
                 return response()->json([
                     'message' => 'A chave de autorização deve ser inforamda'
@@ -52,8 +52,7 @@ class AutenticacaoController extends Controller
             return response()->json([
                 'token' => "$token"
             ], HttpResponse::OK);
-
-        }catch(Exception $e) {
+        } catch (Exception $e) {
             return response()->json([
                 'message'=> 'Ocorreu algo inesperado'
             ], HttpResponse::SERVER_ERROR);

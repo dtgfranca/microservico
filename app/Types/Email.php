@@ -9,11 +9,11 @@ class Email
     private $email;
 
     public function __construct($email)
-    {   $this->email =  $email;
-        if(!$this->valid()) {
+    {
+        $this->email =  $email;
+        if (!$this->valid()) {
             throw new InvalidArgumentException('O e-mail é inválido', 422);
         }
-
     }
     public function valid()
     {
