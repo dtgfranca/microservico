@@ -16,3 +16,4 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+$router->post('login', ['uses' => 'AutenticacaoController@autenticar']);

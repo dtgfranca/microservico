@@ -11,8 +11,5 @@ class TesteController extends Controller
      */
     public function __construct()
     {
-
     }
-
-
 }
